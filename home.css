@@ -49,7 +49,7 @@ nav .right a {
 }
 
 nav .right a:last-child {
-  color: var(--background-color);
+  
   background-color: var(--text-color);
   padding: 5px 15px;
   border-radius: 5px;
@@ -509,4 +509,5 @@ body {
         height: 1px;
     }
 }
+
 
