@@ -509,3 +509,25 @@ body {
         height: 1px;
     }
 }
+
+.custom-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #000000; /* બ્લેક બેકગ્રાઉન્ડ */
+  color: #ffffff;            /* સફેદ લખાણ */
+  padding: 6px 12px;
+  border-radius: 4px;        /* ફોટા મુજબ થોડા ખૂણા ગોળ */
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 500;
+  gap: 8px;                  /* આઇકન અને લખાણ વચ્ચે જગ્યા */
+}
+
+.custom-btn:hover {
+  opacity: 0.8;              /* હોવર કરવા પર થોડું આછું થશે */
+}
+
+.btn-text {
+  font-size: 16px;
+}
+
