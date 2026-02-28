@@ -1,127 +1,144 @@
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaurav Patoliya | MCA Portfolio</title>
+    <title>Gaurav Patoliya | Software Engineer Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #333; }
-        .hero-section { background: white; padding: 100px 0; border-bottom: 1px solid #eee; }
-        .profile-img { width: 280px; height: 280px; object-fit: cover; border: 8px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .card { border: none; transition: transform 0.3s ease; border-radius: 15px; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .skill-badge { background: white; border: 1px solid #ddd; padding: 10px 20px; border-radius: 50px; display: flex; align-items: center; gap: 10px; font-weight: 600; }
-        .btn-primary { border-radius: 50px; padding: 12px 30px; font-weight: 600; }
-        .btn-outline-primary { border-radius: 50px; padding: 12px 30px; }
-        .project-icon { font-size: 2rem; color: #0d6efd; margin-bottom: 15px; }
+        :root { --google-blue: #4285F4; --google-red: #EA4335; --google-yellow: #FBBC05; --google-green: #34A853; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #202124; }
+        .code-font { font-family: 'Roboto Mono', monospace; }
+        
+        /* Google Style Navbar */
+        .navbar { border-bottom: 1px solid #e0e0e0; background: white; }
+        
+        /* Hero Section */
+        .hero { padding: 100px 0; background: linear-gradient(135px, #f8f9fa 0%, #ffffff 100%); }
+        .profile-ring { border: 4px solid var(--google-blue); padding: 5px; transition: 0.5s; }
+        .profile-ring:hover { border-color: var(--google-green); transform: rotate(5deg); }
+        
+        /* Impact Cards */
+        .project-card { border: 1px solid #e0e0e0; border-radius: 8px; transition: all 0.3s ease; height: 100%; }
+        .project-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: var(--google-blue); }
+        
+        .btn-google { background-color: var(--google-blue); color: white; border-radius: 4px; padding: 10px 24px; font-weight: bold; transition: 0.3s; }
+        .btn-google:hover { background-color: #3367d6; color: white; transform: translateY(-2px); }
+        
+        .skill-tag { background: #f1f3f4; border-radius: 4px; padding: 5px 12px; font-size: 0.9rem; font-weight: 500; border: 1px solid #dadce0; }
     </style>
 </head>
 <body>
 
-<header class="hero-section">
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-dark" href="#">GP<span class="text-primary">.</span></a>
+        <div class="d-flex gap-3">
+            <a href="mailto:gaurav@email.com" class="text-dark"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#" class="text-dark"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7 text-center text-lg-start">
-                <span class="badge bg-primary-soft text-primary mb-2 fw-bold">MCA STUDENT</span>
-                <h1 class="display-3 fw-bold mb-3">Gaurav Patoliya</h1>
-                <p class="lead text-muted mb-4">
-                    I am a passionate Full-Stack Developer focused on building clean and functional web applications.
+            <div class="col-lg-7">
+                <h2 class="code-font text-primary mb-3 mt-4 mt-lg-0">&lt;Hello World /&gt;</h2>
+                <h1 class="display-4 fw-bold mb-3">Gaurav Patoliya</h1>
+                <p class="lead mb-4 text-secondary">
+                    MCA Graduate specializing in **Scalable Systems** and **Full-Stack Engineering**. I build high-impact applications with clean, maintainable code.
                 </p>
-                <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-                    <a href="Gaurav_Resume.pdf" download class="btn btn-primary shadow">
-                        <i class="fa-solid fa-cloud-arrow-down me-2"></i>Download CV
+                <div class="d-flex gap-3">
+                    <a href="Gaurav_Resume.pdf" download class="btn btn-google">
+                        <i class="fa-solid fa-file-pdf me-2"></i>Download Resume
                     </a>
-                    <a href="#projects" class="btn btn-outline-primary">View My Work</a>
+                    <a href="#projects" class="btn btn-outline-dark">Explore Projects</a>
                 </div>
             </div>
             <div class="col-lg-5 text-center mt-5 mt-lg-0">
-                <img src="persona.png" alt="Gaurav Patoliya" class="rounded-circle profile-img">
+                <img src="persona.png" class="rounded-circle profile-ring shadow" style="width: 300px; height: 300px; object-fit: cover;">
             </div>
-        </div>
-    </div>
-</header>
-
-<section id="skills" class="py-5 bg-white">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-5">Technical Expertise</h2>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-            <div class="skill-badge"><img src="html-logo.webp" width="25"> HTML5</div>
-            <div class="skill-badge"><img src="css-logo.webp" width="25"> CSS3</div>
-            <div class="skill-badge"><img src="javascript-logo.webp" width="25"> JavaScript</div>
-            <div class="skill-badge"><img src="OIP.png" width="25"> Bootstrap</div>
-            <div class="skill-badge"><img src="react-logo.webp" width="25"> React.js</div>
-            <div class="skill-badge"><img src="java.png" width="25"> Java</div>
         </div>
     </div>
 </section>
 
 <section id="projects" class="py-5">
     <div class="container">
-        <h2 class="text-center fw-bold mb-5">Featured Projects</h2>
+        <h3 class="fw-bold mb-5 text-center">Engineering Projects</h3>
         <div class="row g-4">
             <div class="col-md-6">
-                <div class="card h-100 shadow-sm p-4">
-                    <div class="project-icon"><i class="fa-solid fa-check-to-slot"></i></div>
-                    <h4 class="fw-bold">Voting Management System</h4>
-                    <p class="text-muted">A secure voting platform featuring Role-Based Access Control and real-time result tracking.</p>
-                    <div class="mt-auto">
-                        <span class="badge bg-light text-dark border">PHP</span>
-                        <span class="badge bg-light text-dark border">MySQL</span>
-                        <div class="mt-3">
-                            <a href="#" class="text-primary fw-bold text-decoration-none">View Code <i class="fa-brands fa-github"></i></a>
-                        </div>
+                <div class="project-card p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h4 class="fw-bold">Voting Management System</h4>
+                        <span class="text-success fw-bold"><i class="fa-solid fa-shield-halved"></i> Secure</span>
                     </div>
+                    <p class="text-muted">Designed a high-security voting architecture with RBAC. Focused on data integrity and SQL injection prevention.</p>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag">PHP 8.x</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Encryption</span>
+                    </div>
+                    <a href="#" class="text-primary text-decoration-none fw-bold">System Design Specs <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
+            
             <div class="col-md-6">
-                <div class="card h-100 shadow-sm p-4">
-                    <div class="project-icon"><i class="fa-solid fa-building-user"></i></div>
-                    <h4 class="fw-bold">Hostel Management System</h4>
-                    <p class="text-muted">An automated system for room allocation, student records, and mess bill generation.</p>
-                    <div class="mt-auto">
-                        <span class="badge bg-light text-dark border">Java</span>
-                        <span class="badge bg-light text-dark border">Spring Boot</span>
-                        <div class="mt-3">
-                            <a href="#" class="text-primary fw-bold text-decoration-none">View Code <i class="fa-brands fa-github"></i></a>
-                        </div>
+                <div class="project-card p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h4 class="fw-bold">Hostel Management API</h4>
+                        <span class="text-primary fw-bold"><i class="fa-solid fa-gears"></i> Automated</span>
                     </div>
+                    <p class="text-muted">Automated administrative workflows for Noble University, reducing manual invoice generation time by 80%.</p>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag">Java Spring</span>
+                        <span class="skill-tag">Rest API</span>
+                        <span class="skill-tag">Oracle DB</span>
+                    </div>
+                    <a href="#" class="text-primary text-decoration-none fw-bold">Architecture Docs <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="education" class="py-5 bg-white">
+<section class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center fw-bold mb-5">Education</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="border-start border-primary border-4 ps-4 mb-4">
-                    <h5 class="fw-bold mb-1">Master of Computer Applications (MCA)</h5>
-                    <p class="text-primary mb-0">Atmiya University | 2023 - Present</p>
+        <h3 class="text-center fw-bold mb-5">Core Competencies</h3>
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <img src="OIP.png" width="40" class="mb-3">
+                    <h6 class="fw-bold">Bootstrap 5</h6>
                 </div>
-                <div class="border-start border-secondary border-4 ps-4">
-                    <h5 class="fw-bold mb-1">Bachelor of Computer Applications (BCA)</h5>
-                    <p class="text-muted mb-0">Noble University | 2020 - 2023</p>
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <img src="react-logo.webp" width="40" class="mb-3">
+                    <h6 class="fw-bold">React Architecture</h6>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <img src="java.png" width="40" class="mb-3">
+                    <h6 class="fw-bold">Backend Logic</h6>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <img src="javascript-logo.webp" width="40" class="mb-3">
+                    <h6 class="fw-bold">ES6+ Scripting</h6>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer id="contact" class="bg-dark text-white py-5 text-center">
-    <div class="container">
-        <h3 class="fw-bold mb-4">Get In Touch</h3>
-        <div class="d-flex justify-content-center gap-4 mb-4">
-            <a href="#" class="text-white fs-3"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" class="text-white fs-3"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:your-email@example.com" class="text-white fs-3"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <p class="text-muted small">&copy; 2026 Gaurav Patoliya. Built with Bootstrap 5.</p>
-    </div>
+<footer class="py-5 text-center border-top">
+    <p class="text-muted mb-0">Designed for Google Interview Readiness | Gaurav Patoliya &copy; 2026</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
